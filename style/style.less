@@ -1,0 +1,992 @@
+@import "variables";
+.mcontainer {
+  margin: 0 auto;
+  header {
+    .basicPosition();
+    background: url("../pics/photo.png") no-repeat;
+    background-size: cover;
+    min-height: 750px;
+    .headerLogo {
+      display: inline-block;
+      margin-top: 42px;
+      margin-left: 200px;
+      span {
+        font-family: Raleway sans-serif;
+        color: #ffffff;
+        font-size: 34px; /* Приближение из-за подстановки шрифтов */
+        font-weight: 400;
+        text-align: right;
+      }
+    }
+    .navigationBlock {
+      // display: flex;
+      //flex-direction: row;
+      //align-items: flex-end;
+      // align-content: space-around;
+      //margin-right: 170px;
+      float: right;
+      margin-top: 20px;
+      nav {
+        margin-right: 120px;
+        label {
+          .fa-bars {
+            display: none;
+          }
+        }
+        #menu {
+          visibility: hidden;
+        }
+        input[type="checkbox"]:checked ~ .menu {
+          visibility: visible;
+        }
+        .menu {
+          list-style-type: none;
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+          height: 60px;
+          padding: 0;
+          li {
+            display: flex;
+            align-items: center;
+            margin-left: 25px;
+            list-style-type: none;
+            a {
+              text-decoration: none;
+              font-family: Montserrat, sans-serif;
+              color: #ffffff;
+              font-size: 14px;
+              font-weight: 300;
+              &:hover,
+              &:active {
+                font-family: Montserrat, sans-serif;
+                color: #c7b29a;
+                font-size: 14px;
+                font-weight: 300;
+                text-align: left;
+              }
+            }
+            .menuLink {
+              font-family: Montserrat, sans-serif;
+              color: #c7b29a;
+              font-size: 14px;
+              font-weight: 300;
+              text-align: left;
+            }
+          }
+        }
+        @media screen and (max-width: 990px) {
+          label {
+            .fa-bars {
+              display: block;
+              visibility: visible;
+              color: white;
+              margin: 20px 0 0 172px;
+            }
+          }
+          .menu {
+            visibility: hidden;
+            margin: 0 auto;
+            height: auto;
+            width: 380px;
+            flex-direction: column;
+          }
+
+          .menu li {
+            height: 40px;
+            text-align: center;
+            background-color: #ccc;
+            margin-top: 2px;
+          }
+          .menu li a {
+            width: 100%;
+          }
+        }
+      }
+    }
+      /* @media screen and (min-width: 770px) {
+         label {
+           .fa-bars {
+             display: block;
+             visibility: visible;
+             color: white;
+             margin: -56px 0 0 255px;
+           }
+         }*/
+
+      /*ul {
+        display: block;
+        li {
+          list-style-type: none;
+          display: inline-block;
+          text-align: left;
+          margin-left: 10px;
+          a {
+            text-decoration: none;
+            display: inline-block;
+            font-family: Montserrat, sans-serif;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 300;
+          }
+          &:hover,
+          &:active {
+            font-family: Montserrat, sans-serif;
+            color: #c7b29a;
+            font-size: 14px;
+            font-weight: 300;
+            text-align: left;
+          }
+        }
+      }*/
+    .headerBtn {
+      margin-bottom: 10px;
+      margin-left: 20px;
+      a {
+        text-decoration: none;
+        display: inline-block;
+        margin-left: 15px;
+      }
+    }
+    .headerBasicBlock {
+      .headerMainInformation {
+        max-width: 590px;
+        margin: 200px auto 0 auto;
+        height: 455px;
+        h2 {
+          font-family: Raleway, sans-serif;
+          color: #ffffff;
+          font-size: 36px; /* Приближение из-за подстановки шрифтов */
+          font-weight: 500;
+          text-align: center;
+        }
+        h1 {
+          font-family: Raleway, sans-serif;
+          color: #ffffff;
+          font-size: 52px; /* Приближение из-за подстановки шрифтов */
+          font-weight: 700;
+          text-align: center;
+        }
+        p {
+          font-family: Montserrat, sans-serif;
+          color: #ffffff;
+          font-size: 16px; /* Приближение из-за подстановки шрифтов */
+          font-weight: 300;
+          line-height: 24px; /* Приближение из-за подстановки шрифтов */
+          text-align: center;
+        }
+        .headerStartedBtn {
+          display: block;
+          border-radius: 3px;
+          background-color: #998675;
+          width: 170px;
+          height: 53px;
+          margin: 40px auto 0 auto;
+          text-decoration: none;
+          span {
+            display: inline-block;
+            margin: 9% 0 0 22%;
+            font-family: Raleway, sans-serif;
+            color: #ffffff;
+            font-size: 14px; /* Приближение из-за подстановки шрифтов */
+            font-weight: 700;
+            line-height: 23px; /* Приближение из-за подстановки шрифтов */
+            text-align: center;
+          }
+        }
+      }
+      .anglePic {
+        display: inline-block;
+        color: #d3c1ad;
+        width: 40px;
+        height: 73px;
+      }
+      .anglePicRight {
+        float: right;
+        display: inline-block;
+        margin: -500px 7% 0 0;
+      }
+      .anglePicLeft {
+        float: left;
+        display: inline-block;
+        margin: -500px auto 0 7%;
+      }
+      .headerSliderContainer {
+        width: 80px;
+        margin: -69px auto 19px auto;
+        padding-bottom: 10px;
+        .headerSlider {
+          text-decoration: none;
+        }
+      }
+      @media screen and (max-width: 990px) {
+        visibility: hidden;
+      }
+    }
+  }
+  .projectsMainDescription {
+    .basicPosition();
+    width: 100%;
+    padding: 0;
+
+    .row {
+      max-width: 1200px;
+      margin: 20px auto;
+      figure {
+        margin: 0 auto;
+        max-width: 270px;
+        .projectsMainDescriptionPic {
+          display: inline-block;
+          margin-left: 41%;
+        }
+        figcaption {
+          .figureDevelopment {
+            font-family: Raleway, sans-serif;
+            color: #c7b299;
+            font-size: 22px; /* Приближение из-за подстановки шрифтов */
+            font-weight: 600;
+            text-align: center;
+          }
+          h4 {
+            font-family: Raleway, sans-serif;
+            color: #555555;
+            font-size: 22px; /* Приближение из-за подстановки шрифтов */
+            font-weight: 600;
+            text-align: center;
+            &:hover,
+            &:active {
+              font-family: Raleway, sans-serif;
+              color: #c7b299;
+              font-size: 22px; /* Приближение из-за подстановки шрифтов */
+              font-weight: 600;
+              text-align: center;
+            }
+          }
+          p {
+            font-family: Montserrat, sans-serif;
+            color: #8c8c8c;
+            font-size: 14px; /* Приближение из-за подстановки шрифтов */
+            font-weight: 300;
+            line-height: 24px; /* Приближение из-за подстановки шрифтов */
+            text-align: center;
+          }
+          .linePic {
+            display: inline-block;
+            margin-left: 38%;
+          }
+        }
+      }
+    }
+    .projectsMainDescriptionLowerSection {
+      .basicPosition();
+      background-color: #fbfaf8;
+      margin: 0 auto;
+      width: 100%;
+      h2 {
+        margin-top: 20px;
+        text-align: center;
+        font-family: Raleway, sans-serif;
+        color: #555555;
+        font-size: 30px; /* Приближение из-за подстановки шрифтов */
+        font-weight: 600;
+      }
+      p {
+        max-width: 760px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Montserrat, sans-serif;
+        color: #8c8c8c;
+        font-size: 16px; /* Приближение из-за подстановки шрифтов */
+        font-weight: 300;
+        line-height: 28px; /* Приближение из-за подстановки шрифтов */
+      }
+      .picturesCombination {
+        background-color: red;
+        margin: 0 auto;
+        //max-height: 483px;
+        max-width: 1239px;
+        width: 100%;
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .purchaseSection {
+    .basicPosition();
+    background: url("../pics/Background.png") no-repeat;
+    background-size: cover;
+    .row {
+      article {
+        margin-top: 15px;
+        h2 {
+          font-family: Raleway, sans-serif;
+          color: #ffffff;
+          font-size: 17px; /* Приближение из-за подстановки шрифтов */
+          text-align: left;
+          a {
+            font-family: Raleway, sans-serif;
+            color: #c7b299;
+            font-size: 17px; /* Приближение из-за подстановки шрифтов */
+            text-align: left;
+            text-decoration: none;
+          }
+        }
+        p {
+          font-family: Montserrat, sans-serif;
+          color: #615855;
+          font-size: 18px; /* Приближение из-за подстановки шрифтов */
+          font-weight: 300;
+          text-align: left;
+        }
+        .purchaseBtn {
+          margin-top: auto;
+          border-radius: 3px;
+          background-color: #998675;
+          width: 170px;
+          height: 50px;
+          text-decoration: none;
+          display: block;
+          float: right;
+          span {
+            font-family: Raleway, sans-serif;
+            color: #ffffff;
+            font-size: 14px; /* Приближение из-за подстановки шрифтов */
+            font-weight: 700;
+            line-height: 23px; /* Приближение из-за подстановки шрифтов */
+            text-align: center;
+            padding-top: 9%;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .latestProjects {
+    .basicPosition();
+    padding-top: 10px;
+    h2 {
+      font-family: Raleway, sans-serif;
+      color: #555555;
+      font-size: 30px; /* Приближение из-за подстановки шрифтов */
+      font-weight: 600;
+      text-align: center;
+    }
+    p {
+      font-family: Montserrat, sans-serif;
+      color: #8c8c8c;
+      font-size: 16px; /* Приближение из-за подстановки шрифтов */
+      font-weight: 300;
+      line-height: 28px; /* Приближение из-за подстановки шрифтов */
+      text-align: center;
+      margin: 0 auto;
+      max-width: 760px;
+    }
+    .row {
+      margin: 20px auto;
+      max-width: 700px;
+      article {
+        display: inline-block;
+        list-style-type: none;
+        .tagContainer {
+          margin: 0 auto;
+          width: 130px;
+          .btnAll {
+            border-radius: 3px;
+            display: block;
+            background-color: #998675;
+            width: 120px;
+            height: 32px;
+            span {
+              font-family: Montserrat, sans-serif;
+              color: #ffffff;
+              font-size: 14px; /* Приближение из-за подстановки шрифтов */
+              font-weight: 300;
+              line-height: 21px; /* Приближение из-за подстановки шрифтов */
+              text-align: center;
+              display: block;
+              margin-top: 5px;
+            }
+          }
+          a {
+            text-decoration: none;
+            display: block;
+            border-radius: 3px;
+            border: #ebebeb solid 1px;
+            box-sizing: border-box;
+            background-color: rgba(17, 17, 17, 0);
+            width: 120px;
+            height: 32px;
+            &:hover,
+            &:active {
+              background-color: #998675;
+            }
+            span {
+              font-family: Montserrat, sans-serif;
+              color: #8c8c8c;
+              font-size: 14px; /* Приближение из-за подстановки шрифтов */
+              font-weight: 300;
+              line-height: 21px; /* Приближение из-за подстановки шрифтов */
+              text-align: center;
+              display: block;
+              margin-top: 5px;
+              &:hover,
+              &:active {
+                color: #ffffff;
+              }
+            }
+          }
+        }
+      }
+    }
+    .setOfArticles {
+      .row {
+        max-width: 1600px;
+        margin: 0 auto;
+        article {
+          .articleContainer {
+            margin: 0 auto;
+            width: 370px;
+            .combinationOfPic {
+              width: 370px;
+              height: 237px;
+              img {
+                width: 370px;
+                height: 237px;
+                position: absolute;
+              }
+              /*.triangle {
+                position: absolute;
+                top: 227px;
+                left: 15px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 10px 10px 10px;
+                border-color: transparent transparent #fbfaf8 transparent;
+              }*/
+            }
+            .articleShortDescription {
+              background-color: #fbfaf8;
+              width: 370px;
+              height: 100px;
+              h4 {
+                font-family: Raleway, sans-serif;
+                color: #c7b29a;
+                font-size: 20px; /* Приближение из-за подстановки шрифтов */
+                font-weight: 500;
+                padding: 20px 0 0 22px;
+              }
+              p {
+                font-family: Montserrat, sans-serif;
+                color: #d1d1d1;
+                font-size: 14px; /* Приближение из-за подстановки шрифтов */
+                font-weight: 300;
+                line-height: 20px; /* Приближение из-за подстановки шрифтов */
+                text-align: left;
+                margin: 0 0 0 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .videoPresentation {
+    .basicPosition();
+    width: 100%;
+    min-height: 600px;
+    background: url("../pics/videoPoster.png");
+    background-size: cover;
+    .overlay {
+      position: absolute;
+      top: 300px;
+      left: 30%;
+      text-align: center;
+      z-index: 1;
+      width: 40%;
+      a {
+        display: block;
+        text-decoration: none;
+        .overlayVideoPlayCircle {
+          position: relative;
+          right: 55px;
+          .overlayVideoCircle {
+            position: relative;
+            margin-top: -110px;
+          }
+          .overlayVideoPlay {
+            position: relative;
+            margin-top: -94px;
+            margin-left: 15px;
+          }
+        }
+      }
+      h3 {
+        font-family: Raleway, sans-serif;
+        color: #ffffff;
+        font-size: 30px; /* Приближение из-за подстановки шрифтов */
+        font-weight: 500;
+        text-align: center;
+      }
+      p {
+        font-family: Montserrat, sans-serif;
+        color: #ffffff;
+        font-size: 16px; /* Приближение из-за подстановки шрифтов */
+        font-weight: 300;
+        line-height: 28px; /* Приближение из-за подстановки шрифтов */
+        text-align: center;
+      }
+      span {
+        font-family: Montserrat, sans-serif;
+        color: #c7b299;
+        font-size: 14px; /* Приближение из-за подстановки шрифтов */
+        font-weight: 400;
+        line-height: 24px; /* Приближение из-за подстановки шрифтов */
+        text-align: center;
+      }
+    }
+  }
+  .mobileDeviceSection {
+    .basicPosition();
+    background-color: #fbfaf8;
+    .row {
+      margin: 0 auto;
+      //margin-top: 10px;
+      max-width: 1000px;
+      .mobileDeviceSectionLeftBox {
+        float: left;
+        img {
+          width: 100%;
+          max-width: 423px;
+          height: auto;
+        }
+      }
+      .mobileDeviceSectionRightBox {
+        float: right;
+        h2 {
+          font-family: Raleway, sans-serif;
+          color: #555555;
+          font-size: 30px; /* Приближение из-за подстановки шрифтов */
+          font-weight: 600;
+          text-align: left;
+        }
+        p {
+          font-family: Montserrat, sans-serif;
+          max-width: 660px;
+          color: #8c8c8c;
+          font-size: 16px; /* Приближение из-за подстановки шрифтов */
+          font-weight: 300;
+          line-height: 28px; /* Приближение из-за подстановки шрифтов */
+          text-align: left;
+        }
+        details {
+          margin-left: 10px;
+          & summary,
+          & p {
+            font-family: Montserrat, sans-serif;
+            color: #8c8c8c;
+            font-size: 16px; /* Приближение из-за подстановки шрифтов */
+            font-weight: 300;
+            line-height: 32px; /* Приближение из-за подстановки шрифтов */
+            text-align: left;
+          }
+          summary {
+            &::-webkit-details-marker {
+              display: none;
+              outline: none;
+            }
+            outline: none;
+            margin-left: 45px;
+            cursor: pointer;
+            &:before {
+              content: url("../pics/summaryArrow.png");
+              margin: 0 18px 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .achievements {
+    .basicPosition();
+    background: url("../pics/Background.png");
+    background-size: cover;
+    .achievementsCombination {
+      .row {
+        max-width: 750px;
+        margin: 25px auto;
+        figure {
+          margin: 0 auto;
+          max-width: 150px;
+          .achievementsIcon {
+            display: block;
+            margin: 0 auto;
+          }
+          figcaption {
+            .amountAchievements {
+              font-family: Montserrat, sans-serif;
+              color: #ffffff;
+              font-size: 24px; /* Приближение из-за подстановки шрифтов */
+              font-weight: 100;
+              line-height: 36px; /* Приближение из-за подстановки шрифтов */
+              text-align: center;
+              display: inherit;
+              margin-top: 13px;
+            }
+            .itemsAchievements {
+              font-family: Montserrat, sans-serif;
+              color: #c7b299;
+              font-size: 14px; /* Приближение из-за подстановки шрифтов */
+              font-weight: 300;
+              line-height: 20px; /* Приближение из-за подстановки шрифтов */
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  .recentPosts {
+    .basicPosition();
+    .recentPostsItemsArrows {
+      margin: 0 0 3% 50%;
+    }
+    h2 {
+      font-family: Raleway, sans-serif;
+      color: #555555;
+      font-size: 30px; /* Приближение из-за подстановки шрифтов */
+      font-weight: 600;
+      text-align: center;
+      margin-top: 35px;
+    }
+    .recentPostsMainText {
+      font-family: Montserrat, sans-serif;
+      max-width: 760px;
+      margin: 0 auto 25px auto;
+      color: #8c8c8c;
+      font-size: 16px; /* Приближение из-за подстановки шрифтов */
+      font-weight: 300;
+      line-height: 28px; /* Приближение из-за подстановки шрифтов */
+      text-align: center;
+    }
+    .row {
+      max-width: 1250px;
+      margin: 10px auto;
+      article {
+        width: 372px;
+        .recentPostsItem {
+          width: 372px;
+          border: solid 1px #f2f2f2;
+          .recentPostsItemsPic {
+            margin-bottom: 10px;
+            position: relative;
+            .recentPostsItemsTime {
+              position: absolute;
+              top: 15px;
+              left: 15px;
+              display: flex;
+              flex-direction: column;
+              border-radius: 3px;
+              .recentPostsItemsDate {
+                background-color: #363636;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                width: 50px;
+                height: 35px;
+                .recentPostsItemsDateSpan {
+                  font-family: Montserrat, sans-serif;
+                  display: block;
+                  margin-top: 9px;
+                  width: 50px;
+                  height: 35px;
+                  color: #ffffff;
+                  font-size: 20px; /* Приближение из-за подстановки шрифтов */
+                  font-weight: 300;
+                  line-height: 20px; /* Приближение из-за подстановки шрифтов */
+                  text-align: center;
+                }
+              }
+              .recentPostsItemsMonth {
+                background-color: #252525;
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+                width: 50px;
+                height: 25px;
+                .recentPostsItemsMonthSpan {
+                  font-family: Roboto, sans-serif;
+                  display: block;
+                  color: #ffffff;
+                  font-size: 12px; /* Приближение из-за подстановки шрифтов */
+                  font-weight: 400;
+                  line-height: 20px; /* Приближение из-за подстановки шрифтов */
+                  text-align: center;
+                }
+              }
+            }
+            a {
+              text-decoration: none;
+              position: absolute;
+              left: 155px;
+              bottom: 15px;
+            }
+          }
+          .recentPostsItemsText {
+            margin: 0 0 20px 30px;
+            h3 {
+              font-family: Raleway, sans-serif;
+              color: #555555;
+              font-size: 20px; /* Приближение из-за подстановки шрифтов */
+              font-weight: 500;
+              text-align: left;
+            }
+            p {
+              font-family: Montserrat, sans-serif;
+              color: #8c8c8c;
+              font-size: 14px; /* Приближение из-за подстановки шрифтов */
+              font-weight: 300;
+              line-height: 22px; /* Приближение из-за подстановки шрифтов */
+              text-align: left;
+            }
+            a {
+              font-family: Montserrat, sans-serif;
+              text-decoration: none;
+              color: #c7b299;
+              font-size: 14px; /* Приближение из-за подстановки шрифтов */
+              font-weight: 300;
+              line-height: 20px; /* Приближение из-за подстановки шрифтов */
+              text-align: left;
+            }
+          }
+        }
+      }
+      .selectedArticle {
+        background-color: #362f2d;
+        .selectedRecentPostsItemsPic {
+          .recentPostsItemsTime {
+            .selectedItemsDate {
+              background-color: #c7b299;
+            }
+            .selectedItemsMonth {
+              background-color: #a48d72;
+            }
+          }
+        }
+        .selectedItemsText {
+          h3 {
+            color: #c7b299;
+          }
+          p {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  .logoItems {
+    .basicPosition();
+    width: 100%;
+    background: url("../pics/logoBackground.png") no-repeat;
+    background-size: cover;
+
+    div {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: space-around;
+      a {
+        display: block;
+        text-decoration: none;
+        width: 25%;
+        max-width: 200px;
+        margin: 2%;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  //.lining {
+  // min-height: 650px;
+  //}
+  footer {
+    .basicPosition();
+    width: 100%;
+    .footerHighBlock {
+      background-color: #191919;
+      .row {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      hr {
+        border: 0;
+        height: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .footerHighBlockDescription {
+        max-width: 260px;
+        p {
+          font-family: Montserrat, sans-serif;
+          color: #545454;
+          font-size: 14px; /* Приближение из-за подстановки шрифтов */
+          font-weight: 300;
+          line-height: 24px; /* Приближение из-за подстановки шрифтов */
+          text-align: left;
+        }
+        a {
+          text-decoration: none;
+          span {
+            font-family: Montserrat, sans-serif;
+            color: #ffffff;
+            font-size: 14px; /* Приближение из-за подстановки шрифтов */
+            font-weight: 300;
+            line-height: 24px; /* Приближение из-за подстановки шрифтов */
+            text-align: left;
+          }
+        }
+      }
+      .footerHighBlockRecentPosts {
+        max-width: 260px;
+        h4 {
+          font-family: Raleway, sans-serif;
+          color: #ffffff;
+          font-size: 24px; /* Приближение из-за подстановки шрифтов */
+          font-weight: 700;
+          text-align: left;
+        }
+        a {
+          text-decoration: none;
+          & time {
+            font-family: Montserrat, sans-serif;
+            color: #363636;
+            font-size: 12px; /* Приближение из-за подстановки шрифтов */
+            font-weight: 300;
+            line-height: 20px; /* Приближение из-за подстановки шрифтов */
+            text-align: left;
+          }
+          & p {
+            font-family: Montserrat, sans-serif;
+            color: #545454;
+            font-size: 14px; /* Приближение из-за подстановки шрифтов */
+            font-weight: 300;
+            line-height: 20px; /* Приближение из-за подстановки шрифтов */
+            text-align: left;
+          }
+        }
+      }
+      .footerHighBlockTwitter {
+        max-width: 270px;
+        h4 {
+          font-family: Raleway, sans-serif;
+          color: #ffffff;
+          font-size: 24px; /* Приближение из-за подстановки шрифтов */
+          font-weight: 700;
+          text-align: left;
+        }
+        article {
+          p {
+            font-family: Montserrat, sans-serif;
+            color: #545454;
+            font-size: 14px; /* Приближение из-за подстановки шрифтов */
+            font-weight: 300;
+            line-height: 20px; /* Приближение из-за подстановки шрифтов */
+            text-align: left;
+            a {
+              font-family: Montserrat, sans-serif;
+              color: #00bff3;
+              font-size: 14px; /* Приближение из-за подстановки шрифтов */
+              font-weight: 300;
+              line-height: 20px; /* Приближение из-за подстановки шрифтов */
+              text-align: left;
+              text-decoration: none;
+            }
+          }
+          time {
+            font-family: Montserrat, sans-serif;
+            color: #363636;
+            font-size: 12px; /* Приближение из-за подстановки шрифтов */
+            font-weight: 300;
+            line-height: 20px; /* Приближение из-за подстановки шрифтов */
+            text-align: left;
+          }
+        }
+      }
+      .footerHighBlockWidgetSection {
+        max-width: 350px;
+        h4 {
+          text-align: center;
+          width: 100%;
+          font-family: Raleway, sans-serif;
+          color: #ffffff;
+          font-size: 24px; /* Приближение из-за подстановки шрифтов */
+          font-weight: 700;
+        }
+        .footerHighBlockWidget {
+          max-width: 280px;
+          display: flex;
+          flex-direction: row;
+          align-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          .footerHighBlockWidgetItem {
+            margin: 0 10px 10px 0;
+            a img {
+              width: 130px;
+              height: 100px;
+            }
+          }
+        }
+      }
+    }
+    .footerLowBlock {
+      .basicPosition();
+      background-color: #111111;
+      padding-top: 20px;
+      div.vertical-line {
+        width: 1px; /* Line width */
+        background-color: white; /* Line color */
+        height: 10px; /* Override in-line if you want specific height. */
+        display: inline-block;
+      }
+      ul {
+        display: block;
+        li {
+          display: inline-block;
+          font-family: Montserrat, sans-serif;
+          color: #545454;
+          font-size: 13px; /* Приближение из-за подстановки шрифтов */
+          font-weight: 300;
+          line-height: 20px; /* Приближение из-за подстановки шрифтов */
+          text-align: left;
+          list-style-type: none;
+          a {
+            font-family: Montserrat, sans-serif;
+            color: #959595;
+            font-size: 13px; /* Приближение из-за подстановки шрифтов */
+            font-weight: 300;
+            line-height: 20px; /* Приближение из-за подстановки шрифтов */
+            text-align: left;
+            text-decoration: none;
+          }
+        }
+      }
+      .footerLowBlockLeftPart {
+        float: left;
+        margin-left: 35px;
+      }
+      .footerLowBlockRightPart {
+        float: right;
+        margin-right: 160px;
+      }
+    }
+  }
+}
+
