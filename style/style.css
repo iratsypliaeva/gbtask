@@ -209,6 +209,10 @@
   margin: 40px auto 0 auto;
   text-decoration: none;
 }
+.mcontainer header .headerBasicBlock .headerMainInformation .headerStartedBtn:hover,
+.mcontainer header .headerBasicBlock .headerMainInformation .headerStartedBtn:focus {
+  background-color: #5b5046;
+}
 .mcontainer header .headerBasicBlock .headerMainInformation .headerStartedBtn span {
   display: inline-block;
   margin: 9% 0 0 22%;
@@ -336,7 +340,6 @@
   /* Приближение из-за подстановки шрифтов */
 }
 .mcontainer .projectsMainDescription .projectsMainDescriptionLowerSection .picturesCombination {
-  background-color: red;
   margin: 0 auto;
   max-width: 1239px;
   width: 100%;
@@ -388,6 +391,10 @@
   display: block;
   float: right;
 }
+.mcontainer .purchaseSection .row article .purchaseBtn:hover,
+.mcontainer .purchaseSection .row article .purchaseBtn:focus {
+  background-color: #5b5046;
+}
 .mcontainer .purchaseSection .row article .purchaseBtn span {
   font-family: Raleway, sans-serif;
   color: #ffffff;
@@ -433,6 +440,7 @@
 .mcontainer .latestProjects .row article {
   display: inline-block;
   list-style-type: none;
+  margin-bottom: 30px;
 }
 .mcontainer .latestProjects .row article .tagContainer {
   margin: 0 auto;
@@ -442,7 +450,7 @@
   border-radius: 3px;
   display: block;
   background-color: #998675;
-  width: 120px;
+  width: 107px;
   height: 32px;
 }
 .mcontainer .latestProjects .row article .tagContainer .btnAll span {
@@ -464,7 +472,7 @@
   border: #ebebeb solid 1px;
   box-sizing: border-box;
   background-color: rgba(17, 17, 17, 0);
-  width: 120px;
+  width: 107px;
   height: 32px;
 }
 .mcontainer .latestProjects .row article .tagContainer a:hover,
@@ -547,7 +555,7 @@
   background-size: cover;
 }
 .mcontainer .videoPresentation .overlay {
-  margin: 250px auto 0 auto;
+  margin: 130px auto 0 auto;
   text-align: center;
   z-index: 1;
   width: 40%;
@@ -558,17 +566,18 @@
 }
 .mcontainer .videoPresentation .overlay a .overlayVideoPlayCircle {
   position: relative;
-  right: 55px;
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
 }
 .mcontainer .videoPresentation .overlay a .overlayVideoPlayCircle .overlayVideoCircle {
   position: relative;
-  left: 104px;
-  margin-top: -96px;
+  top: -10px;
 }
 .mcontainer .videoPresentation .overlay a .overlayVideoPlayCircle .overlayVideoPlay {
   position: relative;
-  margin-top: -94px;
-  margin-left: 15px;
+  top: -95px;
 }
 .mcontainer .videoPresentation .overlay h3 {
   font-family: Raleway, sans-serif;
@@ -618,6 +627,7 @@
 }
 .mcontainer .mobileDeviceSection .row .mobileDeviceSectionRightBox {
   float: right;
+  margin-top: 25px;
 }
 .mcontainer .mobileDeviceSection .row .mobileDeviceSectionRightBox h2 {
   font-family: Raleway, sans-serif;
@@ -705,6 +715,7 @@
   line-height: 20px;
   /* Приближение из-за подстановки шрифтов */
   text-align: center;
+  display: inherit;
 }
 .mcontainer .recentPosts {
   width: 100%;
@@ -922,6 +933,10 @@
   /* Приближение из-за подстановки шрифтов */
   text-align: left;
 }
+.mcontainer footer .footerHighBlock .footerHighBlockDescription a span:hover,
+.mcontainer footer .footerHighBlock .footerHighBlockDescription a span:active {
+  color: #b2b2b2;
+}
 .mcontainer footer .footerHighBlock .footerHighBlockRecentPosts {
   max-width: 260px;
 }
@@ -987,6 +1002,10 @@
   /* Приближение из-за подстановки шрифтов */
   text-align: left;
   text-decoration: none;
+}
+.mcontainer footer .footerHighBlock .footerHighBlockTwitter article p a:hover,
+.mcontainer footer .footerHighBlock .footerHighBlockTwitter article p a:active {
+  color: white;
 }
 .mcontainer footer .footerHighBlock .footerHighBlockTwitter article time {
   font-family: Montserrat, sans-serif;
